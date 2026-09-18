@@ -18,9 +18,9 @@ export function SobreEmporio() {
     },
     {
       icon: Globe,
-      value: "Viagens",
+      value: "Experiências",
       label: "Memoráveis",
-      description: "Brasil e Argentina",
+      description: "Do Empório às vinícolas",
     },
     {
       icon: Award,
@@ -32,12 +32,10 @@ export function SobreEmporio() {
 
   return (
     <section className="py-32 bg-cream relative overflow-hidden">
-      {/* Decoração de fundo */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-wine/5 rounded-full blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        {/* Intro */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,11 +56,10 @@ export function SobreEmporio() {
           <p className="text-lg lg:text-xl text-wood/70 leading-relaxed">
             O que começou com uma paixão genuína por vinhos transformou-se em um 
             <strong className="text-wine font-semibold"> espaço único em Americana</strong>, 
-            onde cada garrafa conta uma história e cada viagem cria memórias inesquecíveis.
+            onde cada garrafa conta uma história e cada experiência cria memórias inesquecíveis.
           </p>
         </motion.div>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
@@ -74,22 +71,18 @@ export function SobreEmporio() {
               className="group"
             >
               <div className="bg-white border border-wine/10 rounded-2xl p-8 text-center hover:shadow-medium transition-all duration-300 hover:-translate-y-1 h-full">
-                {/* Icon */}
                 <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-wine/10 to-gold/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <stat.icon className="w-8 h-8 text-wine" />
                 </div>
                 
-                {/* Value */}
                 <p className="text-4xl font-serif text-wine mb-2 font-bold">
                   {stat.value}
                 </p>
                 
-                {/* Label */}
                 <p className="text-sm uppercase tracking-widest text-gold font-semibold mb-3">
                   {stat.label}
                 </p>
                 
-                {/* Description */}
                 <p className="text-sm text-wood/60 leading-relaxed">
                   {stat.description}
                 </p>
@@ -98,7 +91,6 @@ export function SobreEmporio() {
           ))}
         </div>
 
-        {/* Bottom Text */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
