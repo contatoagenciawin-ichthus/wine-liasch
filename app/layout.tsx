@@ -23,10 +23,15 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "Empório Liasch | Vinhos e Experiências",
   description: "Mais que vinhos, momentos. Experiências que ficam para sempre.",
-  generator: "v0.app",
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: "/apple-icon.png",
+    icon: [
+      {
+        url: "/images/logo-symbol.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/images/logo-symbol.png",
+    apple: "/images/logo-symbol.png",
   },
 };
 
