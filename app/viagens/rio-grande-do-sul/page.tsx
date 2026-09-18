@@ -50,38 +50,6 @@ export default function RioGrandeDoSulPage() {
         <TestimonialCarousel />
       </section>
 
-      {/* CTA Próxima Viagem */}
-      <section className="py-24 bg-gradient-to-b from-cream to-wine/10 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-[150px]" />
-        
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <span className="inline-block px-4 py-2 border border-wine/20 rounded-full text-xs uppercase tracking-widest text-wine/70 mb-6 bg-white/50">
-            Próxima Experiência
-          </span>
-          
-          <h2 className="text-4xl lg:text-5xl font-serif text-wine mb-6 leading-tight">
-            A próxima é ainda maior:
-            <br />
-            <span className="italic text-gold">Mendoza, Argentina</span>
-          </h2>
-          
-          <p className="text-lg text-wood/70 mb-8 leading-relaxed">
-            Se você gostou do que viu aqui, imagine viver 5 dias nas vinícolas mais exclusivas 
-            aos pés da Cordilheira dos Andes.
-          </p>
-          
-          <a
-            href="/mendoza"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-wine text-cream rounded-xl font-bold uppercase tracking-wider hover:bg-wine-light hover:scale-105 transition-all duration-300 shadow-strong"
-          >
-            Ver Roteiro de Mendoza
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
-      </section>
-
       {/* CTA WhatsApp */}
       <WhatsAppCtaSection />
 
