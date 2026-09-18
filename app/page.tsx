@@ -2,7 +2,6 @@ import { HeroWineBar } from "@/components/hero-wine-bar";
 import { BrandIntro } from "@/components/home/brand-intro";
 import { SobreEmporio } from "@/components/home/sobre-emporio";
 import { ParallaxSection } from "@/components/layout/parallax-section";
-import { BannerMendozaTeaser } from "@/components/home/banner-mendoza-teaser";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { TestimonialCarousel } from "@/components/testimonial-carousel";
 import { WhatsAppCtaSection } from "@/components/whatsapp-cta-section";
@@ -29,15 +28,12 @@ export default function Home() {
       {/* Sobre o Empório */}
       <SobreEmporio />
       
-      {/* Banner Urgente Mendoza */}
-      <BannerMendozaTeaser />
-      
       {/* Parallax: Experiências */}
       <ParallaxSection
         imageUrl="https://images.unsplash.com/photo-1533052472566-487661858a47?q=80&w=1000"
-        title="Do Rio Grande do Sul"
-        highlight="à Argentina"
-        subtitle="Experiências que transformam momentos em memórias"
+        title="Do vinho à experiência"
+        highlight="momentos que ficam"
+        subtitle="Curadoria, encontros e histórias compartilhadas à mesa"
         goldHighlight
       />
       
