@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Wine, Calendar, Images } from "lucide-react";
+import { Menu, X, Wine, Images } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
@@ -18,10 +18,8 @@ export function Navbar() {
   }, []);
 
   const menuItems = [
-    { label: "Início", href: "/", icon: Wine },
-    { label: "Mendoza 2026", href: "/mendoza", icon: Calendar, highlight: true },
-    { label: "Nossas Viagens", href: "/viagens/rio-grande-do-sul", icon: Images },
-    // ❌ removido: Contato
+    { label: "Início", href: "/", icon: Wine, highlight: false },
+    { label: "Nossas Viagens", href: "/viagens/rio-grande-do-sul", icon: Images, highlight: false },
   ];
 
   return (
@@ -38,7 +36,6 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20 lg:h-24">
-            {/* Logo */}
             <Link href="/" className="flex items-center group">
               <Image
                 src={
@@ -54,7 +51,6 @@ export function Navbar() {
               />
             </Link>
 
-            {/* Menu Desktop */}
             <div className="hidden lg:flex items-center space-x-8">
               {menuItems.map((item) => (
                 <Link
@@ -71,8 +67,6 @@ export function Navbar() {
                   }`}
                 >
                   {item.label}
-
-                  {/* Underline hover (só para itens normais) */}
                   {!item.highlight && (
                     <span
                       className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
@@ -84,7 +78,6 @@ export function Navbar() {
               ))}
             </div>
 
-            {/* Hamburger Mobile */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${
@@ -104,7 +97,6 @@ export function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Menu Mobile - Full Screen Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -114,7 +106,6 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 lg:hidden"
           >
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -123,7 +114,6 @@ export function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
-            {/* Menu Content */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -132,7 +122,6 @@ export function Navbar() {
               className="absolute top-0 right-0 bottom-0 w-full max-w-sm bg-wine shadow-premium"
             >
               <div className="flex flex-col h-full p-8 pt-28">
-                {/* Menu Items */}
                 <nav className="flex-1 space-y-2">
                   {menuItems.map((item, index) => (
                     <motion.div
@@ -159,7 +148,6 @@ export function Navbar() {
                   ))}
                 </nav>
 
-                {/* Footer Mobile Menu */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -171,7 +159,7 @@ export function Navbar() {
                       Americana • SP
                     </p>
                     <p className="text-cream text-sm">
-                      Vinhos, Bistrô e Viagens Inesquecíveis
+                      Vinhos, Bistrô e Experiências
                     </p>
                   </div>
 
@@ -181,6 +169,7 @@ export function Navbar() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gold hover:text-cream transition-colors"
+                      aria-label="Instagram"
                     >
                       <svg
                         className="w-6 h-6"
