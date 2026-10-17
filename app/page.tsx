@@ -86,7 +86,7 @@ export default function ShopPreview() {
             {["Vinhos", "Espumantes", "Destilados", "Vem Viver", "Kits & Presentes", "O Empório"].map((item) => (
               <a
                 key={item}
-                href={item === "O Empório" ? "#emporio" : item === "Vem Viver" ? "#vemviver" : "#categorias"}
+                href={item === "O Empório" ? "https://www.emporioliasch.com.br" : item === "Vem Viver" ? "https://vemviver.emporioliasch.com.br" : item === "Vinhos" ? "/categoria/vinhos" : "#categorias"}
                 className="text-xs font-semibold uppercase tracking-[0.13em] text-[#4c403b] transition-colors hover:text-[#74113a]"
               >
                 {item}
@@ -101,10 +101,10 @@ export default function ShopPreview() {
             <button type="button" className="hidden h-11 w-11 items-center justify-center rounded-full hover:bg-black/5 sm:flex" aria-label="Minha conta">
               <UserRound className="h-5 w-5" />
             </button>
-            <button type="button" className="relative flex h-11 w-11 items-center justify-center rounded-full bg-[#74113a] text-white" aria-label="Carrinho">
+            <a href="/carrinho" className="relative flex h-11 w-11 items-center justify-center rounded-full bg-[#74113a] text-white" aria-label="Carrinho">
               <ShoppingBag className="h-5 w-5" />
-              <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#c5a065] px-1 text-[10px] font-bold text-[#2c1810]">0</span>
-            </button>
+              <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-[#c5a065] px-1 text-[10px] font-bold text-[#2c1810]">1</span>
+            </a>
           </div>
         </div>
 
@@ -176,7 +176,7 @@ export default function ShopPreview() {
           {categories.map((cat, index) => (
             <a
               key={cat.name}
-              href="#selecoes"
+              href="/categoria/vinhos"
               className={`group relative min-h-[400px] overflow-hidden ${index === 0 ? "md:row-span-1" : ""}`}
             >
               <img src={cat.image} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
@@ -202,7 +202,7 @@ export default function ShopPreview() {
               <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#9b7b47]">Curadoria Liasch</span>
               <h2 className="mt-3 font-serif text-4xl text-[#4d1230] sm:text-5xl">Escolhas do Empório</h2>
             </div>
-            <a href="#" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#74113a]">
+            <a href="/categoria/vinhos" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#74113a]">
               Ver todos <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -213,13 +213,13 @@ export default function ShopPreview() {
                   <Bottle tone={product.tone} />
                 </div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9b7b47]">Destaque</p>
-                <h3 className="mt-2 font-serif text-xl text-[#382923] sm:text-2xl">{product.label}</h3>
+                <a href="/produto/tinto-selecionado"><h3 className="mt-2 font-serif text-xl text-[#382923] sm:text-2xl">{product.label}</h3></a>
                 <p className="mt-2 text-xs leading-5 text-[#766963]">{product.detail}</p>
                 <div className="mt-5 flex items-center justify-between border-t border-[#2c211d]/10 pt-4">
                   <span className="text-sm font-semibold text-[#4d1230]">Preço no catálogo</span>
-                  <button type="button" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#74113a] text-white transition-transform group-hover:scale-105" aria-label={`Adicionar ${product.label}`}>
+                  <a href="/carrinho" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#74113a] text-white transition-transform group-hover:scale-105" aria-label={`Adicionar ${product.label}`}>
                     <ShoppingBag className="h-4 w-4" />
-                  </button>
+                  </a>
                 </div>
               </article>
             ))}
@@ -240,7 +240,7 @@ export default function ShopPreview() {
             <p className="mt-6 text-base leading-7 text-[#fff8ec]/72">
               Para um jantar, um presente ou simplesmente para conhecer algo novo. A curadoria do Empório aproxima cada ocasião do rótulo que combina com ela.
             </p>
-            <a href="#" className="mt-8 inline-flex items-center gap-3 border-b border-[#d6bc89] pb-2 text-xs font-bold uppercase tracking-[0.16em] text-[#d6bc89]">
+            <a href="https://wa.me/5519997088241" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-3 border-b border-[#d6bc89] pb-2 text-xs font-bold uppercase tracking-[0.16em] text-[#d6bc89]">
               Falar com o Empório <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -258,7 +258,7 @@ export default function ShopPreview() {
             <p className="mt-7 max-w-xl text-base leading-7 text-[#6d605a]">
               Um espaço dedicado à linha de sucos Vem Viver, integrado ao mesmo universo de curadoria do Empório e preparado para crescer com novas categorias.
             </p>
-            <a href="#" className="mt-8 inline-flex min-h-12 items-center gap-3 bg-[#4d1230] px-7 text-xs font-bold uppercase tracking-[0.14em] text-white">
+            <a href="https://vemviver.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex min-h-12 items-center gap-3 bg-[#4d1230] px-7 text-xs font-bold uppercase tracking-[0.14em] text-white">
               Conhecer Vem Viver <ArrowRight className="h-4 w-4" />
             </a>
           </div>
