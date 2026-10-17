@@ -32,7 +32,8 @@ function Bottle({ tone }: { tone: string }) {
 
 export function ProductShowcaseCarousel() {
   const [itemsPerPage, setItemsPerPage] = useState(4);
-  const [page, setPage] = useState(0);\n  const [paused, setPaused] = useState(false);
+  const [page, setPage] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     const media = window.matchMedia("(min-width: 768px)");
