@@ -196,7 +196,7 @@ export default function ShopPreview() {
 
       <section className="grid lg:grid-cols-2">
         <div className="relative min-h-[520px] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1455885666463-9a8d8912dbd2?q=85&w=1600&auto=format&fit=crop" alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <Image src="/images/hero1.jpg" alt="Seleção de vinhos no Empório Liasch" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 50vw" />
           <div className="absolute inset-0 bg-black/25" />
         </div>
         <div className="flex items-center bg-[#4d1230] px-7 py-16 text-[#fff8ec] lg:px-16">
