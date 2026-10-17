@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ArrowLeft, ArrowRight, ShoppingBag } from "lucide-react";
+import { ArrowLeft, ArrowRight, Pause, Play, ShoppingBag } from "lucide-react";
 
 const showcaseProducts = [
   { label: "Tinto selecionado", detail: "750 ml · seleção do Empório", tone: "from-[#3f071b] to-[#7b173e]" },
@@ -32,7 +32,7 @@ function Bottle({ tone }: { tone: string }) {
 
 export function ProductShowcaseCarousel() {
   const [itemsPerPage, setItemsPerPage] = useState(4);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(0);\n  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     const media = window.matchMedia("(min-width: 768px)");
@@ -49,11 +49,12 @@ export function ProductShowcaseCarousel() {
   }, [itemsPerPage]);
 
   useEffect(() => {
+    if (paused) return;
     const timer = window.setInterval(() => {
       setPage((current) => (current + 1) % pages);
     }, 6500);
     return () => window.clearInterval(timer);
-  }, [pages]);
+  }, [pages, paused]);
 
   const visible = useMemo(() => {
     const start = page * itemsPerPage;
@@ -72,6 +73,15 @@ export function ProductShowcaseCarousel() {
           </div>
 
           <div className="hidden gap-2 sm:flex">
+            <button
+              type="button"
+              onClick={() => setPaused((value) => !value)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-[#4d1230]/20 text-[#4d1230] transition hover:bg-[#4d1230] hover:text-white"
+              aria-label={paused ? "Continuar rotação da vitrine" : "Pausar rotação da vitrine"}
+              aria-pressed={paused}
+            >
+              {paused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
+            </button>
             <button
               type="button"
               onClick={() => go(page - 1)}
