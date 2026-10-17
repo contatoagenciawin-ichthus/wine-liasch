@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";\nimport { HeroCarousel } from "@/components/shop-preview/hero-carousel";
+import Image from "next/image";
+import { HeroCarousel } from "@/components/shop-preview/hero-carousel";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -124,7 +125,9 @@ export default function ShopPreview() {
         )}
       </header>
 
-      <HeroCarousel />\n\n      <section id="categorias" className="mx-auto max-w-[1440px] px-5 py-20 lg:px-10 lg:py-28">
+      <HeroCarousel />
+
+      <section id="categorias" className="mx-auto max-w-[1440px] px-5 py-20 lg:px-10 lg:py-28">
         <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#9b7b47]">Comece por aqui</span>
