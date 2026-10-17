@@ -9,10 +9,10 @@ export function ShopHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const links = [
     ["Vinhos", "/categoria/vinhos"],
-    ["Espumantes", "/categoria/vinhos"],
-    ["Destilados", "/categoria/vinhos"],
+    ["Espumantes", "/categoria/espumantes"],
+    ["Destilados", "/categoria/destilados"],
     ["Vem Viver", "/categoria/sucos"],
-    ["Kits & Presentes", "/categoria/vinhos"],
+    ["Kits & Presentes", "/categoria/kits-presentes"],
     ["O Empório", "https://www.emporioliasch.com.br"],
   ];
 
