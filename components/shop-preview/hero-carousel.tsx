@@ -52,7 +52,8 @@ const slides: Slide[] = [
 ];
 
 export function HeroCarousel() {
-  const [active, setActive] = useState(0);\n  const [paused, setPaused] = useState(false);
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
   useEffect(() => {
     if (paused) return;
     const timer = window.setInterval(() => {
@@ -155,6 +156,15 @@ export function HeroCarousel() {
         </div>
 
         <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => setPaused((value) => !value)}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/35 text-white transition hover:bg-white hover:text-[#4d1230]"
+            aria-label={paused ? "Continuar rotação dos banners" : "Pausar rotação dos banners"}
+            aria-pressed={paused}
+          >
+            {paused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
+          </button>
           <button
             type="button"
             onClick={() => goTo(active - 1)}
