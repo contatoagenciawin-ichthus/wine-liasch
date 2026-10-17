@@ -11,7 +11,7 @@ export function ShopHeader() {
     ["Vinhos", "/categoria/vinhos"],
     ["Espumantes", "/categoria/vinhos"],
     ["Destilados", "/categoria/vinhos"],
-    ["Vem Viver", "https://vemviver.emporioliasch.com.br"],
+    ["Vem Viver", "/categoria/sucos"],
     ["Kits & Presentes", "/categoria/vinhos"],
     ["O Empório", "https://www.emporioliasch.com.br"],
   ];
