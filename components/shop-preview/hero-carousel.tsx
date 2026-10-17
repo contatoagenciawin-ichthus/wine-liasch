@@ -37,8 +37,8 @@ const slides: Slide[] = [
     primaryHref: "/categoria/vinhos",
     secondaryLabel: "Falar com o Empório",
     secondaryHref: "https://wa.me/5519997088241",
-    image: "/galeria/rs/rs4.jpg",
-    imageAlt: "Degustação de vinhos selecionados pelo Empório Liasch",
+    image: "https://images.unsplash.com/photo-1781181727460-ccd6962647d4?auto=format&fit=crop&q=85&w=2200",
+    imageAlt: "Exposição premium de vinhos em ambiente sofisticado",
     theme: "cellar",
   },
   {
