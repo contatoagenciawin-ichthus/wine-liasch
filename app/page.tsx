@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { HeroCarousel } from "@/components/shop-preview/hero-carousel";
+import { ProductShowcaseCarousel } from "@/components/shop-preview/product-showcase-carousel";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -213,6 +214,8 @@ export default function ShopPreview() {
           </div>
         </div>
       </section>
+
+      <ProductShowcaseCarousel />
 
       <section id="vemviver" className="overflow-hidden bg-[#fcfaf5]">
         <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:px-10 lg:py-28">
