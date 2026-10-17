@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronDown, Pause, Play } from "lucide-react";
 
 type Slide = {
   eyebrow: string;
@@ -37,8 +37,8 @@ const slides: Slide[] = [
     primaryHref: "/categoria/vinhos",
     secondaryLabel: "Falar com o Empório",
     secondaryHref: "https://wa.me/5519997088241",
-    image: "https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?q=88&w=2200&auto=format&fit=crop",
-    imageAlt: "Garrafas de vinho em ambiente de adega",
+    image: "/galeria/rs/rs4.jpg",
+    imageAlt: "Degustação de vinhos selecionados pelo Empório Liasch",
     theme: "cellar",
   },
   {
@@ -52,14 +52,15 @@ const slides: Slide[] = [
 ];
 
 export function HeroCarousel() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(0);\n  const [paused, setPaused] = useState(false);
   useEffect(() => {
+    if (paused) return;
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % slides.length);
     }, 7000);
 
     return () => window.clearInterval(timer);
-  }, []);
+  }, [paused]);
 
   const goTo = (index: number) => setActive((index + slides.length) % slides.length);
   const slide = slides[active];
