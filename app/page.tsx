@@ -149,7 +149,7 @@ export default function ShopPreview() {
               <a href="#selecoes" className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#f6efe2] px-7 text-sm font-bold uppercase tracking-[0.12em] text-[#55102d] transition-transform hover:-translate-y-0.5">
                 Explorar seleção <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="#emporio" className="inline-flex min-h-12 items-center justify-center border border-white/45 px-7 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10">
+              <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center border border-white/45 px-7 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10">
                 Conhecer o Empório
               </a>
             </div>
