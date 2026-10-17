@@ -140,7 +140,7 @@ export default function ShopPreview() {
               20 anos de curadoria em Americana
             </div>
             <h1 className="max-w-3xl font-serif text-5xl leading-[1.02] text-[#fffaf2] sm:text-6xl lg:text-[82px]">
-              Rótulos escolhidos para quem gosta de <span className="italic text-[#d6bc89]">escolher bem.</span>
+              Para quem gosta de <span className="italic text-[#d6bc89]">escolher bem.</span>
             </h1>
             <p className="mt-7 max-w-xl text-base leading-7 text-[#fffaf2]/78 sm:text-lg">
               Vinhos, espumantes e destilados reunidos com o olhar de quem vive esse universo há duas décadas.
