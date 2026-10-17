@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Open_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { AgeGate } from "@/components/shop-preview/age-gate";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <body className={`${playfair.variable} ${openSans.variable} font-sans antialiased`}>
+        <AgeGate />
         {children}
         <Analytics />
       </body>
