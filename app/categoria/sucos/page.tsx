@@ -3,32 +3,17 @@ import { ChevronDown, SlidersHorizontal } from "lucide-react";
 import { ShopHeader } from "@/components/shop-preview/shop-header";
 import { ShopFooter } from "@/components/shop-preview/shop-footer";
 
-const juices = [
-  ["Suco de Uva Integral", "1 L · Vem Viver", "Catálogo em definição", "from-[#3b1327] to-[#6f2149]", "#f3e8cf"],
-  ["Suco de Uva Integral", "1,5 L · Vem Viver", "Catálogo em definição", "from-[#2b0f20] to-[#5b173c]", "#f3e8cf"],
-  ["Suco de Uva Branco", "1 L · Vem Viver", "Catálogo em definição", "from-[#7e6a2f] to-[#c1a457]", "#f3e8cf"],
-  ["Suco de Uva Branco", "1,5 L · Vem Viver", "Catálogo em definição", "from-[#695927] to-[#ad9349]", "#f3e8cf"],
-  ["Suco de Laranja", "1 L · Vem Viver", "Catálogo em definição", "from-[#d87316] to-[#f2a82e]", "#fff3db"],
-  ["Suco de Laranja", "1,5 L · Vem Viver", "Catálogo em definição", "from-[#c66112] to-[#e99421]", "#fff3db"],
-];
+const mockupVertical = "https://raw.githubusercontent.com/contatoagenciawin-ichthus/vemviver/d7d758d1c5b425c7702f08b98468fcc374896fac/public/brand/mockups-atualizados/linha-vertical-1.png";
+const mockupHorizontal = "https://raw.githubusercontent.com/contatoagenciawin-ichthus/vemviver/d7d758d1c5b425c7702f08b98468fcc374896fac/public/brand/mockups-atualizados/linha-horizontal-1.png";
 
-function JuiceBottle({ tone, labelBg, large }: { tone: string; labelBg: string; large?: boolean }) {
-  return (
-    <div className={`relative mx-auto ${large ? "h-[300px] w-[118px]" : "h-[260px] w-[102px]"}`}>
-      <div className="absolute left-1/2 top-0 h-9 w-10 -translate-x-1/2 rounded-t-lg bg-[#ede7da]" />
-      <div className="absolute left-1/2 top-7 h-8 w-14 -translate-x-1/2 rounded-t-[22px] bg-[#efe8d9]" />
-      <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 rounded-[38px_38px_22px_22px] bg-gradient-to-br ${tone} shadow-[0_24px_55px_rgba(38,18,18,.16)] ${large ? "h-[260px] w-[108px]" : "h-[225px] w-[92px]"}`}>
-        <div
-          className="absolute left-1/2 top-[42%] w-[82%] -translate-x-1/2 px-2 py-5 text-center shadow-sm"
-          style={{ backgroundColor: labelBg }}
-        >
-          <span className="block font-serif text-lg italic text-[#74113a]">Vem Viver</span>
-          <span className="mt-1 block text-[7px] uppercase tracking-[0.16em] text-[#67584f]">suco integral</span>
-        </div>
-      </div>
-    </div>
-  );
-}
+const juices = [
+  ["Suco de Uva Integral", "1 L · Vem Viver", "Catálogo em definição", "10%"],
+  ["Suco de Uva Integral", "1,5 L · Vem Viver", "Catálogo em definição", "26%"],
+  ["Suco de Uva Branco", "1 L · Vem Viver", "Catálogo em definição", "42%"],
+  ["Suco de Uva Branco", "1,5 L · Vem Viver", "Catálogo em definição", "58%"],
+  ["Suco de Laranja", "1 L · Vem Viver", "Catálogo em definição", "74%"],
+  ["Suco de Laranja", "1,5 L · Vem Viver", "Catálogo em definição", "90%"],
+];
 
 export default function JuicesPage() {
   return (
@@ -44,10 +29,12 @@ export default function JuicesPage() {
               Uma vitrine dedicada à linha de sucos, integrada à experiência comercial do Empório.
             </p>
           </div>
-          <div className="flex items-end justify-center gap-3">
-            <JuiceBottle tone="from-[#3b1327] to-[#6f2149]" labelBg="#f3e8cf" large />
-            <JuiceBottle tone="from-[#d87316] to-[#f2a82e]" labelBg="#fff3db" />
-            <JuiceBottle tone="from-[#7e6a2f] to-[#c1a457]" labelBg="#f3e8cf" large />
+          <div className="relative min-h-[360px] overflow-hidden bg-[#efe8dc] lg:min-h-[430px]">
+            <img
+              src={mockupHorizontal}
+              alt="Linha de sucos Vem Viver em mockups aprovados"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
           </div>
         </div>
       </section>
@@ -72,10 +59,15 @@ export default function JuicesPage() {
         </div>
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-3 md:gap-5">
-          {juices.map(([name, detail, price, tone, labelBg], index) => (
+          {juices.map(([name, detail, price, position]) => (
             <article key={`${name}-${detail}`} className="group bg-[#fcfaf5] p-4 sm:p-6">
-              <div className="mb-6 flex min-h-[340px] items-center justify-center bg-[#f0ebe2] py-7">
-                <JuiceBottle tone={tone} labelBg={labelBg} large={index % 2 === 1} />
+              <div className="relative mb-6 min-h-[340px] overflow-hidden bg-[#f0ebe2]">
+                <img
+                  src={mockupVertical}
+                  alt={`${name} Vem Viver`}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  style={{ objectPosition: `${position} center` }}
+                />
               </div>
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9b7b47]">Vem Viver</p>
               <h2 className="mt-2 font-serif text-lg text-[#382923] sm:text-2xl">{name}</h2>
