@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Open_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
-import { WhatsAppFloating } from "@/components/whatsapp-floating";
-
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -21,15 +16,10 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Empório Liasch | Vinhos e Experiências",
-  description: "Mais que vinhos, momentos. Experiências que ficam para sempre.",
+  title: "Prévia Loja | Empório Liasch",
+  description: "Proposta visual navegável para a loja online do Empório Liasch.",
   icons: {
-    icon: [
-      {
-        url: "/images/logo-symbol.png",
-        type: "image/png",
-      },
-    ],
+    icon: [{ url: "/images/logo-symbol.png", type: "image/png" }],
     shortcut: "/images/logo-symbol.png",
     apple: "/images/logo-symbol.png",
   },
@@ -40,16 +30,8 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body
-        className={`${playfair.variable} ${openSans.variable} font-sans bg-cream text-wood antialiased`}
-      >
-        <Navbar />
-
+      <body className={`${playfair.variable} ${openSans.variable} font-sans antialiased`}>
         {children}
-
-        <Footer />
-        <WhatsAppFloating />
-
         <Analytics />
       </body>
     </html>
