@@ -25,9 +25,18 @@ import {
 } from "lucide-react";
 
 const categories = [
-  { name: "Vinhos", kicker: "Curadoria para todos os estilos", image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=85&w=1200&auto=format&fit=crop" },
-  { name: "Espumantes", kicker: "Para brindar com intenção", image: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?q=85&w=1200&auto=format&fit=crop" },
-  { name: "Destilados", kicker: "Seleção para descobrir aos poucos", image: "https://images.unsplash.com/photo-1527281400683-1aae777175f8?q=85&w=1200&auto=format&fit=crop" },
+  { name: "Vinhos", kicker: "Curadoria para todos os estilos", image: "/galeria/rs/rs7.jpg", href: "/categoria/vinhos" },
+  { name: "Espumantes", kicker: "Para brindar com intenção", image: "/galeria/rs/rs5.jpg", href: "/categoria/espumantes" },
+  { name: "Destilados", kicker: "Seleção para descobrir aos poucos", image: "/galeria/rs/rs2.jpg", href: "/categoria/destilados" },
+];
+
+const navLinks = [
+  { label: "Vinhos", href: "/categoria/vinhos" },
+  { label: "Espumantes", href: "/categoria/espumantes" },
+  { label: "Destilados", href: "/categoria/destilados" },
+  { label: "Vem Viver", href: "/categoria/sucos" },
+  { label: "Kits & Presentes", href: "/categoria/kits-presentes" },
+  { label: "O Empório", href: "https://www.emporioliasch.com.br", external: true },
 ];
 
 const products = [
@@ -85,13 +94,15 @@ export default function ShopPreview() {
           </a>
 
           <nav className="hidden flex-1 items-center justify-center gap-7 lg:flex">
-            {["Vinhos", "Espumantes", "Destilados", "Vem Viver", "Kits & Presentes", "O Empório"].map((item) => (
+            {navLinks.map((item) => (
               <a
-                key={item}
-                href={item === "O Empório" ? "https://www.emporioliasch.com.br" : item === "Vem Viver" ? "/categoria/sucos" : item === "Vinhos" ? "/categoria/vinhos" : "#categorias"}
+                key={item.label}
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
                 className="text-xs font-semibold uppercase tracking-[0.13em] text-[#4c403b] transition-colors hover:text-[#74113a]"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </nav>
@@ -112,14 +123,16 @@ export default function ShopPreview() {
 
         {menuOpen && (
           <nav className="border-t border-[#2c211d]/10 bg-[#f9f6ef] px-6 py-6 lg:hidden">
-            {["Vinhos", "Espumantes", "Destilados", "Vem Viver", "Kits & Presentes", "O Empório"].map((item) => (
+            {navLinks.map((item) => (
               <a
-                key={item}
-                href="#categorias"
+                key={item.label}
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
                 onClick={() => setMenuOpen(false)}
                 className="flex items-center justify-between border-b border-[#2c211d]/10 py-4 text-sm font-semibold uppercase tracking-[0.14em]"
               >
-                {item}<ChevronRight className="h-4 w-4" />
+                {item.label}<ChevronRight className="h-4 w-4" />
               </a>
             ))}
           </nav>
@@ -144,7 +157,7 @@ export default function ShopPreview() {
           {categories.map((cat, index) => (
             <a
               key={cat.name}
-              href="/categoria/vinhos"
+              href={cat.href}
               className={`group relative min-h-[400px] overflow-hidden ${index === 0 ? "md:row-span-1" : ""}`}
             >
               <img src={cat.image} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
@@ -197,7 +210,7 @@ export default function ShopPreview() {
 
       <section className="grid lg:grid-cols-2">
         <div className="relative min-h-[520px] overflow-hidden">
-          <Image src="/images/hero1.jpg" alt="Seleção de vinhos no Empório Liasch" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 50vw" />
+          <Image src="/galeria/rs/rs8.jpg" alt="Experiência entre vinhedos e seleção de vinhos" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 50vw" />
           <div className="absolute inset-0 bg-black/25" />
         </div>
         <div className="flex items-center bg-[#4d1230] px-7 py-16 text-[#fff8ec] lg:px-16">
@@ -232,23 +245,21 @@ export default function ShopPreview() {
               Ver sucos <ArrowRight className="h-4 w-4" />
             </a>
           </div>
-          <div className="order-1 relative flex min-h-[480px] items-end justify-center overflow-hidden bg-[radial-gradient(circle_at_45%_28%,#f0d39b_0%,#d9b26e_22%,#7b173e_60%,#3b0b20_100%)] lg:order-2">
-            <div className="absolute left-7 top-7 rounded-full border border-white/30 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-white/80">Vem Viver</div>
-            <div className="relative mb-[-45px] flex items-end gap-3">
-              {[
-                ["h-[380px] w-[120px]","bg-gradient-to-br from-[#4f3a22] to-[#160d09]"],
-                ["h-[330px] w-[105px]","bg-gradient-to-br from-[#e09426] to-[#9e3d17]"],
-                ["h-[360px] w-[112px]","bg-gradient-to-br from-[#76521e] to-[#29140d]"],
-              ].map(([size,tone],i)=>(
-                <div key={i} className={`relative rounded-[45px_45px_24px_24px] ${size} ${tone} shadow-2xl`}>
-                  <div className="absolute left-1/2 top-[-22px] h-12 w-10 -translate-x-1/2 rounded-t-lg bg-[#efe8d9]" />
-                  <div className="absolute left-1/2 top-[125px] w-[82%] -translate-x-1/2 bg-[#f3ead8] px-2 py-6 text-center">
-                    <span className="block font-serif text-2xl italic text-[#74113a]">Vem Viver</span>
-                    <span className="mt-1 block text-[8px] uppercase tracking-[0.18em] text-[#67584f]">suco integral</span>
-                  </div>
-                </div>
-              ))}
+          <div className="order-1 relative min-h-[480px] overflow-hidden bg-[#efe8dc] lg:order-2">
+            <div className="absolute left-7 top-7 z-10 rounded-full border border-[#4d1230]/15 bg-white/70 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-[#4d1230] backdrop-blur">
+              Vem Viver
             </div>
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcSet="https://raw.githubusercontent.com/contatoagenciawin-ichthus/vemviver/d7d758d1c5b425c7702f08b98468fcc374896fac/public/brand/mockups-atualizados/linha-vertical-1.png"
+              />
+              <img
+                src="https://raw.githubusercontent.com/contatoagenciawin-ichthus/vemviver/d7d758d1c5b425c7702f08b98468fcc374896fac/public/brand/mockups-atualizados/linha-horizontal-1.png"
+                alt="Linha de sucos Vem Viver em mockups aprovados"
+                className="absolute inset-0 h-full w-full object-cover object-center"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -285,13 +296,13 @@ export default function ShopPreview() {
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d6bc89]">Loja</p>
               <div className="mt-4 space-y-3 text-sm text-white/65">
-                <p>Vinhos</p><p>Espumantes</p><p>Destilados</p><a href="/categoria/sucos" className="block hover:text-white">Sucos Vem Viver</a>
+                <a href="/categoria/vinhos" className="block hover:text-white">Vinhos</a><a href="/categoria/espumantes" className="block hover:text-white">Espumantes</a><a href="/categoria/destilados" className="block hover:text-white">Destilados</a><a href="/categoria/sucos" className="block hover:text-white">Sucos Vem Viver</a>
               </div>
             </div>
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d6bc89]">Empório</p>
               <div className="mt-4 space-y-3 text-sm text-white/65">
-                <p>Sobre</p><p>Contato</p><p>Atendimento</p><p>Políticas</p>
+                <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Sobre</a><a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Contato</a><a href="https://wa.me/5519997088241" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Atendimento</a><p>Políticas</p>
               </div>
             </div>
             <div className="col-span-2 sm:col-span-1">
