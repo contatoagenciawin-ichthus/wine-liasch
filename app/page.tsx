@@ -86,7 +86,7 @@ export default function ShopPreview() {
             {["Vinhos", "Espumantes", "Destilados", "Vem Viver", "Kits & Presentes", "O Empório"].map((item) => (
               <a
                 key={item}
-                href={item === "O Empório" ? "https://www.emporioliasch.com.br" : item === "Vem Viver" ? "https://vemviver.emporioliasch.com.br" : item === "Vinhos" ? "/categoria/vinhos" : "#categorias"}
+                href={item === "O Empório" ? "https://www.emporioliasch.com.br" : item === "Vem Viver" ? "/categoria/sucos" : item === "Vinhos" ? "/categoria/vinhos" : "#categorias"}
                 className="text-xs font-semibold uppercase tracking-[0.13em] text-[#4c403b] transition-colors hover:text-[#74113a]"
               >
                 {item}
@@ -258,8 +258,8 @@ export default function ShopPreview() {
             <p className="mt-7 max-w-xl text-base leading-7 text-[#6d605a]">
               Um espaço dedicado à linha de sucos Vem Viver, integrado ao mesmo universo de curadoria do Empório e preparado para crescer com novas categorias.
             </p>
-            <a href="https://vemviver.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex min-h-12 items-center gap-3 bg-[#4d1230] px-7 text-xs font-bold uppercase tracking-[0.14em] text-white">
-              Conhecer Vem Viver <ArrowRight className="h-4 w-4" />
+            <a href="/categoria/sucos" className="mt-8 inline-flex min-h-12 items-center gap-3 bg-[#4d1230] px-7 text-xs font-bold uppercase tracking-[0.14em] text-white">
+              Ver sucos <ArrowRight className="h-4 w-4" />
             </a>
           </div>
           <div className="order-1 relative flex min-h-[480px] items-end justify-center overflow-hidden bg-[radial-gradient(circle_at_45%_28%,#f0d39b_0%,#d9b26e_22%,#7b173e_60%,#3b0b20_100%)] lg:order-2">
@@ -315,7 +315,7 @@ export default function ShopPreview() {
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d6bc89]">Loja</p>
               <div className="mt-4 space-y-3 text-sm text-white/65">
-                <p>Vinhos</p><p>Espumantes</p><p>Destilados</p><p>Vem Viver</p>
+                <p>Vinhos</p><p>Espumantes</p><p>Destilados</p><a href="/categoria/sucos" className="block hover:text-white">Sucos Vem Viver</a>
               </div>
             </div>
             <div>
