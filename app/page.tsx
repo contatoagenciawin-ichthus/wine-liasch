@@ -25,9 +25,9 @@ import {
 } from "lucide-react";
 
 const categories = [
-  { name: "Vinhos", kicker: "Curadoria para todos os estilos", image: "/galeria/rs/rs7.jpg", href: "/categoria/vinhos" },
-  { name: "Espumantes", kicker: "Para brindar com intenção", image: "/galeria/rs/rs5.jpg", href: "/categoria/espumantes" },
-  { name: "Destilados", kicker: "Seleção para descobrir aos poucos", image: "/galeria/rs/rs2.jpg", href: "/categoria/destilados" },
+  { name: "Vinhos", kicker: "Curadoria para todos os estilos", image: "https://images.unsplash.com/photo-1758827926633-621fb8694e6e?auto=format&fit=crop&q=85&w=1600", href: "/categoria/vinhos" },
+  { name: "Espumantes", kicker: "Para brindar com intenção", image: "https://images.unsplash.com/photo-1776530899794-aaaa3b9dd1a1?auto=format&fit=crop&q=85&w=1600", href: "/categoria/espumantes" },
+  { name: "Destilados", kicker: "Seleção para descobrir aos poucos", image: "https://images.unsplash.com/photo-1775421122859-3b4396ee109c?auto=format&fit=crop&q=85&w=1600", href: "/categoria/destilados" },
 ];
 
 const navLinks = [
@@ -210,7 +210,7 @@ export default function ShopPreview() {
 
       <section className="grid lg:grid-cols-2">
         <div className="relative min-h-[520px] overflow-hidden">
-          <Image src="/galeria/rs/rs8.jpg" alt="Experiência entre vinhedos e seleção de vinhos" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 50vw" />
+          <img src="https://images.unsplash.com/photo-1684159890786-5406275a5ebf?auto=format&fit=crop&q=85&w=1800" alt="Ambiente de loja com seleção de vinhos" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/25" />
         </div>
         <div className="flex items-center bg-[#4d1230] px-7 py-16 text-[#fff8ec] lg:px-16">
