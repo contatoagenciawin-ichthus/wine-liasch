@@ -19,7 +19,7 @@ export function ShopFooter() {
               <Link href="/categoria/vinhos" className="block hover:text-white">Vinhos</Link>
               <Link href="/categoria/vinhos" className="block hover:text-white">Espumantes</Link>
               <Link href="/categoria/vinhos" className="block hover:text-white">Destilados</Link>
-              <a href="https://vemviver.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Vem Viver</a>
+              <Link href="/categoria/sucos" className="block hover:text-white">Sucos Vem Viver</Link>
             </div>
           </div>
           <div>
