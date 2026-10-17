@@ -17,9 +17,10 @@ export function ShopFooter() {
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d6bc89]">Loja</p>
             <div className="mt-4 space-y-3 text-sm text-white/65">
               <Link href="/categoria/vinhos" className="block hover:text-white">Vinhos</Link>
-              <Link href="/categoria/vinhos" className="block hover:text-white">Espumantes</Link>
-              <Link href="/categoria/vinhos" className="block hover:text-white">Destilados</Link>
+              <Link href="/categoria/espumantes" className="block hover:text-white">Espumantes</Link>
+              <Link href="/categoria/destilados" className="block hover:text-white">Destilados</Link>
               <Link href="/categoria/sucos" className="block hover:text-white">Sucos Vem Viver</Link>
+              <Link href="/categoria/kits-presentes" className="block hover:text-white">Kits & Presentes</Link>
             </div>
           </div>
           <div>
@@ -27,7 +28,7 @@ export function ShopFooter() {
             <div className="mt-4 space-y-3 text-sm text-white/65">
               <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Sobre</a>
               <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Contato</a>
-              <p>Atendimento</p>
+              <a href="https://wa.me/5519997088241" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Atendimento</a>
               <p>Políticas</p>
             </div>
           </div>
