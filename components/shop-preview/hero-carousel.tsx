@@ -53,16 +53,13 @@ const slides: Slide[] = [
 
 export function HeroCarousel() {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-
   useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (paused || reduceMotion) return;
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % slides.length);
     }, 7000);
+
     return () => window.clearInterval(timer);
-  }, [paused]);
+  }, []);
 
   const goTo = (index: number) => setActive((index + slides.length) % slides.length);
   const slide = slides[active];
@@ -71,8 +68,6 @@ export function HeroCarousel() {
     <section
       id="inicio"
       className="relative min-h-[680px] overflow-hidden lg:min-h-[760px]"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       aria-roledescription="carrossel"
       aria-label="Destaques da loja"
     >
