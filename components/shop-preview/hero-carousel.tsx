@@ -60,7 +60,7 @@ export function HeroCarousel() {
     if (paused || reduceMotion) return;
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % slides.length);
-    }, 5600);
+    }, 7000);
     return () => window.clearInterval(timer);
   }, [paused]);
 
@@ -90,23 +90,19 @@ export function HeroCarousel() {
                 : "bg-[linear-gradient(90deg,rgba(19,13,12,.86)_0%,rgba(45,26,20,.58)_46%,rgba(35,20,15,.16)_75%,rgba(0,0,0,.08)_100%)]"}`} />
             </>
           ) : (
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_35%,rgba(231,201,137,.35),transparent_26%),linear-gradient(115deg,#35101f_0%,#5c1636_50%,#1f3a2b_100%)]">
-              <div className="absolute inset-y-0 right-0 hidden w-[58%] items-end justify-center overflow-hidden lg:flex">
-                <div className="absolute right-[8%] top-[12%] h-[430px] w-[430px] rounded-full border border-white/10" />
-                <img
-                  src="https://raw.githubusercontent.com/contatoagenciawin-ichthus/vemviver/d7d758d1c5b425c7702f08b98468fcc374896fac/public/brand/mockups-atualizados/linha-horizontal-1.png"
-                  alt="Linha de sucos Vem Viver"
-                  className="relative z-10 mb-[-2%] max-h-[88%] w-[94%] object-contain object-bottom drop-shadow-2xl"
-                />
-              </div>
-              <div className="absolute bottom-0 right-[-18%] flex h-[54%] w-[92%] items-end justify-center opacity-60 lg:hidden">
-                <img
-                  src="https://raw.githubusercontent.com/contatoagenciawin-ichthus/vemviver/d7d758d1c5b425c7702f08b98468fcc374896fac/public/brand/mockups-atualizados/linha-vertical-1.png"
-                  alt=""
-                  className="max-h-full w-auto object-contain object-bottom"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#260d19]/90 via-[#3a1027]/62 to-transparent lg:via-[#3a1027]/38" />
+            <div className="absolute inset-0 overflow-hidden bg-[#3f1328]">
+              <img
+                src="https://raw.githubusercontent.com/contatoagenciawin-ichthus/vemviver/d7d758d1c5b425c7702f08b98468fcc374896fac/public/brand/mockups-atualizados/linha-horizontal-1.png"
+                alt="Linha de sucos Vem Viver"
+                className="absolute inset-0 hidden h-full w-full object-cover object-center lg:block"
+              />
+              <img
+                src="https://raw.githubusercontent.com/contatoagenciawin-ichthus/vemviver/d7d758d1c5b425c7702f08b98468fcc374896fac/public/brand/mockups-atualizados/linha-vertical-1.png"
+                alt="Linha de sucos Vem Viver"
+                className="absolute inset-0 h-full w-full object-cover object-center lg:hidden"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#240c18]/86 via-[#361126]/48 to-[#241318]/12" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/24 via-transparent to-black/12" />
             </div>
           )}
         </div>
