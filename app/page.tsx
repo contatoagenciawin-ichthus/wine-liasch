@@ -300,9 +300,14 @@ export default function ShopPreview() {
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-14 flex max-w-[1440px] flex-col justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/35 sm:flex-row">
-          <span>Prévia de layout · Empório Liasch</span>
-          <span>Estrutura comercial demonstrativa</span>
+        <div className="mx-auto mt-14 max-w-[1440px] border-t border-white/10 pt-6">
+          <p className="mb-4 text-[10px] uppercase tracking-[0.14em] text-white/48">
+            Venda de bebidas alcoólicas proibida para menores de 18 anos. Beba com moderação.
+          </p>
+          <div className="flex flex-col justify-between gap-3 text-xs text-white/35 sm:flex-row">
+            <span>Prévia de layout · Empório Liasch</span>
+            <span>Estrutura comercial demonstrativa</span>
+          </div>
         </div>
       </section>
     </main>
