@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "next/image";\nimport { HeroCarousel } from "@/components/shop-preview/hero-carousel";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -124,43 +124,7 @@ export default function ShopPreview() {
         )}
       </header>
 
-      <section id="inicio" className="relative min-h-[680px] overflow-hidden lg:min-h-[760px]">
-        <Image
-          src="/images/hero1.jpg"
-          alt="Experiência com vinhos no Empório Liasch"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(25,12,12,.82)_0%,rgba(45,15,25,.56)_42%,rgba(45,15,25,.14)_72%,rgba(0,0,0,.08)_100%)]" />
-        <div className="relative mx-auto flex min-h-[680px] max-w-[1440px] items-center px-6 py-20 lg:min-h-[760px] lg:px-12">
-          <div className="max-w-3xl">
-            <div className="mb-7 flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-[#d6bc89]">
-              <span className="h-px w-10 bg-[#d6bc89]" />
-              20 anos de curadoria em Americana
-            </div>
-            <h1 className="max-w-3xl font-serif text-5xl leading-[1.02] text-[#fffaf2] sm:text-6xl lg:text-[82px]">
-              Para quem gosta de <span className="italic text-[#d6bc89]">escolher bem.</span>
-            </h1>
-            <p className="mt-7 max-w-xl text-base leading-7 text-[#fffaf2]/78 sm:text-lg">
-              Vinhos, espumantes e destilados reunidos com o olhar de quem vive esse universo há duas décadas.
-            </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a href="#selecoes" className="inline-flex min-h-12 items-center justify-center gap-3 bg-[#f6efe2] px-7 text-sm font-bold uppercase tracking-[0.12em] text-[#55102d] transition-transform hover:-translate-y-0.5">
-                Explorar seleção <ArrowRight className="h-4 w-4" />
-              </a>
-              <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center border border-white/45 px-7 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10">
-                Conhecer o Empório
-              </a>
-            </div>
-          </div>
-        </div>
-        <a href="#categorias" className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/65">
-          Descubra <ChevronDown className="h-4 w-4" />
-        </a>
-      </section>
-
-      <section id="categorias" className="mx-auto max-w-[1440px] px-5 py-20 lg:px-10 lg:py-28">
+      <HeroCarousel />\n\n      <section id="categorias" className="mx-auto max-w-[1440px] px-5 py-20 lg:px-10 lg:py-28">
         <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#9b7b47]">Comece por aqui</span>
