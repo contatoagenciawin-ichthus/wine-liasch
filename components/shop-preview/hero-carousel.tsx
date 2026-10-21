@@ -20,11 +20,11 @@ const slides: Slide[] = [
   {
     eyebrow: "20 anos de curadoria em Americana",
     title: <>Para quem gosta de <span className="italic text-[#d6bc89]">escolher bem.</span></>,
-    description: "Vinhos, espumantes e destilados reunidos com o olhar de quem vive esse universo há duas décadas.",
+    description: "Uma loja boutique de vinhos, espumantes e destilados em que cada escolha passa pelo olhar de quem vive esse universo há duas décadas.",
     primaryLabel: "Explorar seleção",
     primaryHref: "#selecoes",
     secondaryLabel: "Conhecer o Empório",
-    secondaryHref: "https://www.emporioliasch.com.br",
+    secondaryHref: "/emporio",
     image: "/images/hero1.jpg",
     imageAlt: "Experiência com vinhos no Empório Liasch",
     theme: "wine",
