@@ -42,7 +42,7 @@ export default function VinhosPage() {
             <div>
               <h1 className="font-serif text-5xl text-[#4d1230] sm:text-6xl">Vinhos</h1>
               <p className="mt-4 max-w-2xl text-sm leading-6 text-[#6e625c]">
-                Uma seleção pensada para diferentes ocasiões, perfis e momentos.
+                Uma seleção boutique organizada por estilo, origem, ocasião e também pelas vinícolas que fazem parte da curadoria.
               </p>
             </div>
             <div className="text-sm text-[#6e625c]">8 produtos nesta demonstração</div>
@@ -53,7 +53,7 @@ export default function VinhosPage() {
       <section className="mx-auto max-w-[1440px] px-5 py-10 lg:px-10 lg:py-14">
         <div className="mb-8 flex flex-col gap-4 border-b border-[#2c211d]/10 pb-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap gap-2">
-            {["Tintos", "Brancos", "Rosés", "Brasil", "Argentina", "Portugal"].map((filter) => (
+            {["Vinícolas", "Tintos", "Brancos", "Rosés", "Brasil", "Argentina", "Portugal"].map((filter) => (
               <button key={filter} type="button" className="rounded-full border border-[#4d1230]/15 px-4 py-2 text-xs font-semibold text-[#4d1230] hover:bg-[#4d1230] hover:text-white">
                 {filter}
               </button>
