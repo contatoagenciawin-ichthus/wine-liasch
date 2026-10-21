@@ -13,7 +13,7 @@ export function ShopHeader() {
     ["Destilados", "/categoria/destilados"],
     ["Vem Viver", "/categoria/sucos"],
     ["Kits & Presentes", "/categoria/kits-presentes"],
-    ["O Empório", "https://www.emporioliasch.com.br"],
+    ["O Empório", "/emporio"],
   ];
 
   return (
