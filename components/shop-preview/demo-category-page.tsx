@@ -55,7 +55,7 @@ export function DemoCategoryPage({ eyebrow, title, description, filters, product
       <section className="mx-auto max-w-[1440px] px-5 py-10 lg:px-10 lg:py-14">
         <div className="mb-8 flex flex-col gap-4 border-b border-[#2c211d]/10 pb-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap gap-2">
-            {["Vinícolas", ...filters].map((filter) => (
+            {filters.map((filter) => (
               <button key={filter} type="button" className="rounded-full border border-[#4d1230]/15 px-4 py-2 text-xs font-semibold text-[#4d1230] hover:bg-[#4d1230] hover:text-white">
                 {filter}
               </button>
