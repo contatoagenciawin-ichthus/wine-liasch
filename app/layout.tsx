@@ -19,6 +19,10 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "Prévia Loja | Empório Liasch",
   description: "Proposta visual navegável para a loja online do Empório Liasch.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   icons: {
     icon: [{ url: "/images/logo-symbol.png", type: "image/png" }],
     shortcut: "/images/logo-symbol.png",
