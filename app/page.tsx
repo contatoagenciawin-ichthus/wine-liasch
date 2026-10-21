@@ -31,12 +31,12 @@ const categories = [
 ];
 
 const navLinks = [
-  { label: "Vinhos", href: "/categoria/vinhos" },
-  { label: "Espumantes", href: "/categoria/espumantes" },
-  { label: "Destilados", href: "/categoria/destilados" },
-  { label: "Vem Viver", href: "/categoria/sucos" },
-  { label: "Kits & Presentes", href: "/categoria/kits-presentes" },
-  { label: "O Empório", href: "/emporio" },
+  { label: "Vinhos", href: "/categoria/vinhos", external: false },
+  { label: "Espumantes", href: "/categoria/espumantes", external: false },
+  { label: "Destilados", href: "/categoria/destilados", external: false },
+  { label: "Vem Viver", href: "/categoria/sucos", external: false },
+  { label: "Kits & Presentes", href: "/categoria/kits-presentes", external: false },
+  { label: "O Empório", href: "/emporio", external: false },
 ];
 
 const products = [
