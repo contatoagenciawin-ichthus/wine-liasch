@@ -26,8 +26,8 @@ export function ShopFooter() {
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d6bc89]">Empório</p>
             <div className="mt-4 space-y-3 text-sm text-white/65">
-              <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Sobre</a>
-              <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Contato</a>
+              <Link href="/emporio" className="block hover:text-white">Sobre o Empório</Link>
+              <a href="https://wa.me/5519997088241" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Contato</a>
               <a href="https://wa.me/5519997088241" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Atendimento</a>
               <p>Políticas</p>
             </div>
@@ -47,7 +47,12 @@ export function ShopFooter() {
         </p>
         <div className="flex flex-col justify-between gap-3 text-xs text-white/35 sm:flex-row">
           <span>Prévia de layout · Empório Liasch</span>
-          <span>Estrutura comercial demonstrativa</span>
+          <span className="flex flex-wrap gap-x-4 gap-y-2">
+            <span>Estrutura comercial demonstrativa</span>
+            <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="transition hover:text-white/65">
+              Site institucional ↗
+            </a>
+          </span>
         </div>
       </div>
     </footer>
