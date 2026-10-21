@@ -36,7 +36,7 @@ const navLinks = [
   { label: "Destilados", href: "/categoria/destilados" },
   { label: "Vem Viver", href: "/categoria/sucos" },
   { label: "Kits & Presentes", href: "/categoria/kits-presentes" },
-  { label: "O Empório", href: "https://www.emporioliasch.com.br", external: true },
+  { label: "O Empório", href: "/emporio" },
 ];
 
 const products = [
@@ -150,7 +150,7 @@ export default function ShopPreview() {
             </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-[#6e625c]">
-            Uma navegação pensada para quem já sabe o que procura e também para quem quer descobrir algo novo.
+            Uma loja boutique não precisa ter tudo. Precisa saber o que merece estar ali. Navegue por uma seleção feita com critério, origem e ocasião em mente.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
@@ -208,6 +208,40 @@ export default function ShopPreview() {
         </div>
       </section>
 
+      <section className="border-y border-[#2c211d]/10 bg-[#f8f4ec] px-5 py-16 lg:px-10 lg:py-20">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#9b7b47]">Vinícolas selecionadas</span>
+              <h2 className="mt-3 max-w-3xl font-serif text-4xl leading-tight text-[#4d1230] sm:text-5xl">
+                Nomes que chegam à loja pelo mesmo critério.
+              </h2>
+            </div>
+            <p className="max-w-md text-sm leading-6 text-[#6e625c]">
+              Esta área receberá os logotipos oficiais das vinícolas confirmadas pelo Empório. A marca do produtor também será uma porta de entrada para navegar pela seleção.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-px overflow-hidden border border-[#2c211d]/10 bg-[#2c211d]/10 md:grid-cols-3 lg:grid-cols-6">
+            {["01","02","03","04","05","06"].map((item) => (
+              <div key={item} className="flex min-h-[132px] flex-col items-center justify-center bg-[#fbf8f1] px-4 text-center">
+                <span className="font-serif text-3xl text-[#4d1230]/28">{item}</span>
+                <span className="mt-2 text-[9px] font-bold uppercase tracking-[0.2em] text-[#8d7f78]">Logo oficial</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+            <p className="text-xs leading-5 text-[#8a7c75]">
+              Estrutura demonstrativa aguardando as marcas e os arquivos oficiais enviados pelas vinícolas.
+            </p>
+            <a href="/categoria/vinhos" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#74113a]">
+              Explorar a seleção <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="grid lg:grid-cols-2">
         <div className="relative min-h-[520px] overflow-hidden">
           <img src="https://images.unsplash.com/photo-1684159890786-5406275a5ebf?auto=format&fit=crop&q=85&w=1800" alt="Ambiente de loja com seleção de vinhos" className="absolute inset-0 h-full w-full object-cover object-center" />
@@ -231,23 +265,56 @@ export default function ShopPreview() {
       <ProductShowcaseCarousel />
 
       <section id="vemviver" className="overflow-hidden bg-[#fcfaf5]">
-        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:px-10 lg:py-28">
-          <div className="order-2 lg:order-1">
-            <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#9b7b47]">Uma nova frente da casa</span>
-            <h2 className="mt-4 font-serif text-5xl leading-[1.05] text-[#4d1230] sm:text-6xl">
-              Vem Viver.
-              <span className="mt-2 block italic text-[#a37d3e]">Do campo para a mesa.</span>
-            </h2>
-            <p className="mt-7 max-w-xl text-base leading-7 text-[#6d605a]">
-              Um espaço dedicado à linha de sucos Vem Viver, integrado ao mesmo universo de curadoria do Empório e preparado para crescer com novas categorias.
-            </p>
-            <a href="/categoria/sucos" className="mt-8 inline-flex min-h-12 items-center gap-3 bg-[#4d1230] px-7 text-xs font-bold uppercase tracking-[0.14em] text-white">
-              Ver sucos <ArrowRight className="h-4 w-4" />
-            </a>
+        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 lg:grid-cols-[1.06fr_.94fr] lg:items-stretch lg:px-10 lg:py-28">
+          <div className="order-2 flex items-center lg:order-1">
+            <div className="max-w-2xl">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#9b7b47]">Uma história que voltou à mesa</span>
+                <span className="rounded-full border border-[#74113a]/15 bg-[#74113a]/5 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.18em] text-[#74113a]">
+                  Marca exclusiva
+                </span>
+              </div>
+
+              <h2 className="mt-5 font-serif text-5xl leading-[1.04] text-[#4d1230] sm:text-6xl">
+                Antes de ser uma nova linha,
+                <span className="mt-2 block italic text-[#a37d3e]">Vem Viver já era uma história.</span>
+              </h2>
+
+              <p className="mt-7 max-w-xl text-base leading-7 text-[#6d605a]">
+                Em 1992, em Americana, a Vem Viver nasceu como uma pequena casa de sucos naturais. Mais de três décadas depois, o nome volta à mesa em uma linha de sucos integrais escolhida para representar o mesmo cuidado que marcou o começo.
+              </p>
+              <p className="mt-5 max-w-xl text-base leading-7 text-[#6d605a]">
+                Entre um ciclo e outro, a experiência no universo dos vinhos apurou ainda mais o olhar para origem, fornecedor e seleção. É por isso que a nova Vem Viver não chega como mais um produto na prateleira, mas como uma marca com memória, critério e vontade de ser provada.
+              </p>
+
+              <div className="mt-8 border-l-2 border-[#c5a065] pl-5">
+                <p className="font-serif text-2xl italic text-[#4d1230]">“O nome permanece. O cuidado também.”</p>
+              </div>
+
+              <div className="mt-8 grid max-w-xl grid-cols-3 gap-3 border-y border-[#2c211d]/10 py-5">
+                <div>
+                  <strong className="block font-serif text-xl text-[#4d1230]">1992</strong>
+                  <span className="mt-1 block text-[9px] uppercase tracking-[0.15em] text-[#8a7c75]">Onde começou</span>
+                </div>
+                <div className="border-x border-[#2c211d]/10 px-3">
+                  <strong className="block font-serif text-xl text-[#4d1230]">Americana</strong>
+                  <span className="mt-1 block text-[9px] uppercase tracking-[0.15em] text-[#8a7c75]">Origem da marca</span>
+                </div>
+                <div className="pl-1">
+                  <strong className="block font-serif text-xl text-[#4d1230]">Integral</strong>
+                  <span className="mt-1 block text-[9px] uppercase tracking-[0.15em] text-[#8a7c75]">Nova fase</span>
+                </div>
+              </div>
+
+              <a href="/categoria/sucos" className="mt-8 inline-flex min-h-12 items-center gap-3 bg-[#4d1230] px-7 text-xs font-bold uppercase tracking-[0.14em] text-white">
+                Descobrir a linha <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
           </div>
-          <div className="order-1 relative min-h-[480px] overflow-hidden bg-[#efe8dc] lg:order-2">
-            <div className="absolute left-7 top-7 z-10 rounded-full border border-[#4d1230]/15 bg-white/70 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-[#4d1230] backdrop-blur">
-              Vem Viver
+
+          <div className="order-1 relative min-h-[560px] overflow-hidden bg-[#efe8dc] lg:order-2">
+            <div className="absolute left-7 top-7 z-10 rounded-full border border-[#4d1230]/15 bg-white/78 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-[#4d1230] backdrop-blur">
+              Vem Viver · desde 1992
             </div>
             <picture>
               <source
@@ -260,6 +327,11 @@ export default function ShopPreview() {
                 className="absolute inset-0 h-full w-full object-cover object-center"
               />
             </picture>
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#2b101e]/54 to-transparent px-7 pb-7 pt-24 text-white">
+              <p className="max-w-sm text-sm leading-6 text-white/82">
+                Uma marca que retorna às origens sem repetir o passado: a história continua em uma nova forma de chegar à mesa.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -302,7 +374,7 @@ export default function ShopPreview() {
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d6bc89]">Empório</p>
               <div className="mt-4 space-y-3 text-sm text-white/65">
-                <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Sobre</a><a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Contato</a><a href="https://wa.me/5519997088241" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Atendimento</a><p>Políticas</p>
+                <a href="/emporio" className="block hover:text-white">Sobre o Empório</a><a href="https://wa.me/5519997088241" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Contato</a><a href="https://wa.me/5519997088241" target="_blank" rel="noopener noreferrer" className="block hover:text-white">Atendimento</a><p>Políticas</p>
               </div>
             </div>
             <div className="col-span-2 sm:col-span-1">
@@ -320,7 +392,12 @@ export default function ShopPreview() {
           </p>
           <div className="flex flex-col justify-between gap-3 text-xs text-white/35 sm:flex-row">
             <span>Prévia de layout · Empório Liasch</span>
-            <span>Estrutura comercial demonstrativa</span>
+            <span className="flex flex-wrap gap-x-4 gap-y-2">
+              <span>Estrutura comercial demonstrativa</span>
+              <a href="https://www.emporioliasch.com.br" target="_blank" rel="noopener noreferrer" className="transition hover:text-white/65">
+                Site institucional ↗
+              </a>
+            </span>
           </div>
         </div>
       </section>
