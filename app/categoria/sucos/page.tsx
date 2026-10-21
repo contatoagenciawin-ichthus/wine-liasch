@@ -26,7 +26,7 @@ export default function JuicesPage() {
             <p className="text-xs uppercase tracking-[0.22em] text-[#d6bc89]">Loja / Sucos</p>
             <h1 className="mt-4 font-serif text-5xl leading-tight sm:text-6xl">Sucos Vem Viver</h1>
             <p className="mt-5 max-w-xl text-base leading-7 text-white/72">
-              Uma vitrine dedicada à linha de sucos, integrada à experiência comercial do Empório.
+              Uma marca exclusiva com raízes em Americana desde 1992, agora de volta à mesa em uma linha de sucos integrais.
             </p>
           </div>
           <div className="relative min-h-[360px] overflow-hidden bg-[#efe8dc] lg:min-h-[430px]">
@@ -35,6 +35,24 @@ export default function JuicesPage() {
               alt="Linha de sucos Vem Viver em mockups aprovados"
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-[#2c211d]/10 bg-[#efe8dc]">
+        <div className="mx-auto grid max-w-[1440px] gap-8 px-5 py-12 lg:grid-cols-[.55fr_1.45fr] lg:px-10 lg:py-16">
+          <div>
+            <span className="font-serif text-6xl text-[#4d1230]/20 sm:text-7xl">1992</span>
+            <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#9b7b47]">Americana · origem da marca</p>
+          </div>
+          <div>
+            <h2 className="font-serif text-3xl leading-tight text-[#4d1230] sm:text-4xl">
+              O nome volta aos sucos carregando mais de três décadas de história.
+            </h2>
+            <p className="mt-5 max-w-3xl text-sm leading-7 text-[#6e625c]">
+              A Vem Viver começou como uma pequena casa de sucos naturais. Depois de novos ciclos e de uma trajetória que também passou pelo universo dos vinhos, a marca retorna às origens com um olhar ainda mais apurado para qualidade, procedência e seleção.
+            </p>
+            <p className="mt-4 font-serif text-xl italic text-[#a37d3e]">O nome permanece. O cuidado também.</p>
           </div>
         </div>
       </section>
