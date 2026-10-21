@@ -6,7 +6,7 @@ export default function EspumantesPage() {
       eyebrow="Loja / Espumantes"
       title="Espumantes"
       description="Brut, rosé e rótulos para celebrações, presentes e encontros especiais."
-      filters={["Brut", "Rosé", "Nature", "Brasil", "Argentina", "Itália"]}
+      filters={["Vinícolas", "Brut", "Rosé", "Nature", "Brasil", "Argentina", "Itália"]}
       products={[
         { label: "Espumante brut", detail: "750 ml · frescor e elegância", price: "R$ 139,90", tone: "from-[#d0b37a] to-[#efe0b8]" },
         { label: "Brut rosé", detail: "750 ml · delicado e vibrante", price: "R$ 149,90", tone: "from-[#c87883] to-[#edc2c8]" },
